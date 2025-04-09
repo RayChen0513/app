@@ -38,6 +38,13 @@ class MainActivity : AppCompatActivity() {
             }
 
             val player_name = edText.text.toString()
+            val computer = (0..2).random()
+            val player = when(group.checkedRadioButtonId)
+            {
+                R.id.selection1->0
+                R.id.selection2->1
+                else->2
+            }
         }
     }
 }
