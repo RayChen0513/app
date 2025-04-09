@@ -29,5 +29,15 @@ class MainActivity : AppCompatActivity() {
         val text2 = findViewById<TextView>(R.id.text2)
         val text3 = findViewById<TextView>(R.id.text3)
         val text4 = findViewById<TextView>(R.id.text4)
+
+        submit.setOnClickListener(){
+            if (edText.text.isEmpty())
+            {
+                edText.hint = "我的名字"
+                return@setOnClickListener
+            }
+
+            val player_name = edText.text.toString()
+        }
     }
 }
