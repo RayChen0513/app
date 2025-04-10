@@ -45,6 +45,60 @@ class MainActivity : AppCompatActivity() {
                 R.id.selection2->1
                 else->2
             }
+
+            val moras = listOf("剪刀", "石頭", "布")
+
+            if (player == 0)
+            {
+                if (computer == 0)
+                {
+                    text2.text = "贏家：平手"
+                }
+                else if (computer == 1)
+                {
+                    text2.text = "贏家：電腦"
+                }
+                else
+                {
+                    text2.text = "贏家：$player_name"
+                }
+            }
+            else if (player == 1)
+            {
+                if (computer == 0)
+                {
+                    text2.text = "贏家：$player_name"
+                }
+                else if (computer == 1)
+                {
+                    text2.text = "贏家：平手"
+                }
+                else
+                {
+                    text2.text = "贏家：電腦"
+                }
+            }
+            else
+            {
+                if (computer == 0)
+                {
+                    text2.text = "贏家：電腦"
+                }
+                else if (computer == 1)
+                {
+                    text2.text = "贏家：$player_name"
+                }
+                else
+                {
+                    text2.text = "贏家：平手"
+                }
+            }
+
+
+            text1.text = player_name
+            text3.text = moras[player]
+            text4.text = moras[computer]
+
         }
     }
 }
